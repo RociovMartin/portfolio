@@ -1,0 +1,41 @@
+.grid {
+	width: 645px;
+	height: 645px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.square {
+	height: 195px;
+	width: 195px;
+	border: solid black 5px;
+	background-color: var(--fondo);
+	border-radius: 100px;
+	margin: 5px;
+	cursor: grab;
+}
+
+.cir {
+	background-color: var(--rojo);
+}
+.juego{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+}
+#score{
+	margin-right: 50px;
+}
+.btn-start {
+	position: absolute;
+	
+	top: 50%;
+	left: 40%;
+  
+  }
+.hidden{
+	visibility: hidden;
+}

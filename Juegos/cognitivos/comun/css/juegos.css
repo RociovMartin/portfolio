@@ -1,0 +1,302 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* VARIABLES */
+:root {
+    /* Colores */
+    --rojo: #D44949;
+    --rojo-oscuro: #973131;
+    --azul: #84B5D4;
+    --amarillo: #ECD877;
+    --rosa: #FEB2CA;
+    --verde: #83D891;
+
+    --fondo: #E9E7DB;
+    --complementario: #E9E9E9;
+
+    --negro: #000000;
+    --blanco: #ffffff;
+
+    /* Fuentes */
+    --fuente: 'Varela Round', sans-serif;
+
+    /* Tamaños fuentes */
+    --fs-titulo: 5rem;
+    --fs-btn: 2rem;
+    --fs-btn-nivel: 1.8rem;
+    --fs-mensaje: 3rem;
+
+    --fs-titulo-ins: 2.5rem;
+    --fs-text-ins: 1.3rem;
+    
+    /* Botones */
+    --br-btn: 7px;
+    --outline-btn: 3px var(--negro) solid;
+
+    --w-btn: 16rem;
+    --p-btn: 0.9rem;
+    --p-btn-nivel: 0.6rem;
+
+    --w-btn-nivel: 9rem;
+}
+
+
+/* GENERAL */
+* {
+    font-family: var(--fuente);
+}
+
+div#fondo {
+    z-index: -1000;
+}
+
+
+/* TITULO */
+h1#titulo {
+    font-size: var(--fs-titulo);
+    color: var(--negro);
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+    text-align: center;
+}
+
+
+/* BOTONES */
+.btn {
+    width: var(--w-btn);
+    padding: var(--p-btn);
+    border-radius: var(--br-btn);
+
+    border: none;
+    
+    outline: var(--outline-btn);
+    background-color: var(--fondo);
+    color: var(--negro);
+    
+    font-size: var(--fs-btn);
+    text-align: center;
+
+    cursor: pointer; 
+
+    transition: 0.2s;
+}
+
+.btn-nivel {
+    width: var(--w-btn-nivel);
+    padding: var(--p-btn-nivel);
+    border-radius: var(--br-btn);
+
+    border: none;
+    
+    outline: var(--outline-btn);
+    background-color: var(--fondo);
+    color: var(--negro);
+    
+    font-size: var(--fs-btn-nivel);
+    text-align: center;
+
+    cursor: pointer; 
+
+    transition: 0.2s;
+}
+
+.btn:hover, .btn-nivel:hover {
+    color: var(--fondo);
+    background-color: var(--negro);
+
+    transition: 0.2s;
+}
+
+
+/* MENSAJES DE ALERTA */
+.alert {
+    font-size: var(--fs-mensaje);
+    color: var(--negro);
+    text-align: center;
+}
+
+/* INSTRUCCIONES */
+#instrucciones-absoluto {
+    position: absolute;
+    height: 0;
+    top: 362px;
+    z-index: 1000;
+}
+
+.contenedor-instrucciones {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    transform: translate(-590px);
+    transition: 0.5s ease-in;
+}
+
+.instrucciones-btn {
+    width: 181px;
+    height: 111px;
+    margin-left: -70px;
+
+    border-radius: 59px;
+    outline: var(--outline-btn);
+
+    background-color: var(--rojo);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+
+    cursor: pointer;
+}
+
+.cerrar-instrucciones {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cerrar-instrucciones > img {
+    width: 45px;
+}
+
+.instrucciones-btn img {
+    display: block;
+    padding: 1rem;
+    margin-left: auto;
+}
+
+.instrucciones {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 500px;
+    height: 300px;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    
+    border-radius: 22px;
+    outline: var(--outline-btn);
+    background-color: var(--rojo);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    
+    z-index: 1000;
+}
+
+.titulo-ins {
+    font-size: var(--fs-titulo-ins);
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+
+    color: var(--blanco);
+}
+
+.texto-ins {
+    font-size: var(--fs-text-ins);
+    margin: 0.5rem 0;
+    color: var(--blanco);
+}
+
+
+/*========================================================
+          Boton para volver
+==========================================================*/
+
+#volver{
+    position: fixed;
+    left:1rem;
+    top: 1rem;
+    font-size: 3rem;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    /**/
+    transition: 0.1s ease-in;
+    z-index: 1;
+}
+/* Hover de escala  */
+ #volver:hover{
+    transform: scale(1.2);
+
+ }
+
+/*========================================================
+          Logos Footer
+==========================================================*/
+
+.footercontainer{/* contenedor para separar las imaganes del footer */
+    position: fixed;
+    bottom: 0px;
+}
+footer img{/* margin logo footer */
+    width: 200px;
+    margin:1.5rem;
+    
+}
+
+/*========================================================
+    Menu de niveles
+==========================================================*/
+/* contenedor que abarca todo el menu */
+#contenedor-externo{
+    font-family: Varela round;
+    position: fixed;
+    display: flex;
+    height: 76px;
+    background-color: #D44949;
+    top:-3px;
+    right: 100px;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 22px 22px;
+}
+/* contenedor que abarca todos los niveles */
+#contenedor-niveles{
+    display: flex;
+    width: 0px;
+    overflow: hidden;
+    transition: width 1s;
+}
+/* cada boton individual de los niveles */
+.boton-niveles{
+    display: flex;
+    width: 102px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 7px;
+    background-color: #E9E7DB;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* quitar el estilo del "a" */
+#contenedor-niveles a{
+    text-decoration: none;
+}
+/* Hover de los botones */
+.boton-niveles:hover{
+    background-color: black;
+    color: white;
+}
+/* El boton que pulsamos para que aparzca o desaparezca el menu */
+#boton-desplegable-niveles{
+    display: flex;
+    color: white;
+    height: 40px;
+    font-size: 32px;
+    padding: 20px 40px;
+    align-items: center;
+    cursor: pointer;
+}
+/* te selecciona el nivel en el que te encuentras */
+#aSeleccionado, #contenedor-niveles input:checked + .boton-niveles {
+    color: var(--fondo);
+    background-color: var(--negro);
+}
+/*========================================================
+    Fin menu de niveles
+==========================================================*/
