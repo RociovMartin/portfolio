@@ -1,0 +1,424 @@
+﻿/* FUENTE LOCAL */
+@font-face {
+    font-family: 'Varela Round';
+    src: url("../../../../comun/font/VarelaRound-Regular.ttf");
+}
+
+/* VARIABLES */
+:root {
+    /* Colores */
+    --rojo: #D44949;
+    --rojo-oscuro: #973131;
+    --azul: #84B5D4;
+    --amarillo: #ECD877;
+    --rosa: #FEB2CA;
+    --verde: #83D891;
+
+    --fondo: #E9E7DB;
+    --complementario: #E9E9E9;
+
+    --negro: #000000;
+    --blanco: #ffffff;
+
+    /* Fuentes */
+    --fuente: 'Varela Round', sans-serif;
+
+    /* Tamaños fuentes */
+    --fs-titulo: 5rem;
+    --fs-btn: 2rem;
+    --fs-btn-nivel: 1.8rem;
+    --fs-mensaje: 3rem;
+
+    --fs-titulo-ins: 2.5rem;
+    --fs-text-ins: 1.3rem;
+    
+    /* Botones */
+    --br-btn: 7px;
+    --outline-btn: 3px var(--negro) solid;
+
+    --w-btn: 16rem;
+    --p-btn: 0.9rem;
+    --p-btn-nivel: 0.6rem;
+
+    --w-btn-nivel: 9rem;
+}
+
+
+/* GENERAL */
+* {
+    font-family: var(--fuente);
+}
+
+/* TITULO */
+h1 {
+    font-size: 60px;
+    margin: 2rem;
+    text-align: center;
+}
+
+h1#titulo {
+    font-size: var(--fs-titulo);
+    color: var(--negro);
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+    text-align: center;
+    margin-top: 4.5rem;
+}
+
+h2#subtitulo {
+    position: absolute;
+    top: 150px;
+    left: 220px;
+    width: 600px;
+    font-size: 2.5rem;
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+}
+
+
+/* BOTONES */
+.btn {
+    width: var(--w-btn);
+    padding: var(--p-btn);
+    border-radius: var(--br-btn);
+
+    border: none;
+    
+    outline: var(--outline-btn);
+    background-color: var(--fondo);
+    color: var(--negro);
+    
+    font-size: var(--fs-btn);
+    text-align: center;
+
+    cursor: pointer; 
+
+    transition: 0.2s;
+}
+
+.btn-nivel {
+    width: var(--w-btn-nivel);
+    padding: var(--p-btn-nivel);
+    border-radius: var(--br-btn);
+
+    border: none;
+    
+    outline: var(--outline-btn);
+    background-color: var(--fondo);
+    color: var(--negro);
+    
+    font-size: var(--fs-btn-nivel);
+    text-align: center;
+
+    cursor: pointer; 
+
+    transition: 0.1s;
+}
+
+.btn:hover, .btn-nivel:hover {
+    color: var(--fondo);
+    background-color: var(--negro);
+
+    transition: 0.1s;
+}
+
+.btn:disabled, .btn-nivel:disabled, .btn:disabled, .btn-nivel:disabled {
+    color: var(--negro);
+    background-color: var(--fondo);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+/* MENSAJES DE ALERTA */
+.alert {
+    font-size: var(--fs-mensaje);
+    color: var(--negro);
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+
+
+/* GALERÍA JUEGOS */
+#contenedor_principal {
+    max-width: 1000px;
+	margin: auto;
+	margin-top: 3rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+    font-family: var(--fuente);
+}
+
+.tarjetas { 
+    position: relative;
+
+    width: 258px;
+    height: 258px;
+    background-image:url(../img/Pattern.png);
+
+    margin-bottom: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.tarjetas:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.tarjetas img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.tarjetas > p {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 350px;
+    
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--negro);
+    text-shadow: 3px 0 0 var(--blanco), -3px 0 0 var(--blanco), 0 3px 0 var(--blanco), 0 -3px 0 var(--blanco), 2px 2px var(--blanco), -2px -2px 0 var(--blanco), 2px -2px 0 var(--blanco), -2px 2px 0 var(--blanco);
+}
+
+.tarjetas .animacion_tarjetas2 {
+    visibility: hidden;
+}
+.tarjetas:hover .animacion_tarjetas {
+    visibility: hidden;
+}
+.tarjetas:hover .animacion_tarjetas2 {
+    visibility: visible;
+}
+
+
+
+/* INSTRUCCIONES */
+#instrucciones-absoluto {
+    position: absolute;
+    height: 0;
+    top: 362px;
+    z-index: 1000;
+}
+
+.contenedor-instrucciones {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    transform: translate(-590px);
+    transition: 0.5s;
+}
+
+.instrucciones-btn {
+    width: 181px;
+    height: 111px;
+    margin-left: -70px;
+
+    border-radius: 59px;
+    outline: var(--outline-btn);
+
+    background-color: var(--rojo);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+
+    cursor: pointer;
+}
+
+.cerrar-instrucciones {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cerrar-instrucciones > img {
+    width: 45px;
+}
+
+.instrucciones-btn img {
+    display: block;
+    padding: 1rem;
+    margin-left: auto;
+}
+
+.instrucciones {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    width: 500px;
+    height: 300px;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    
+    border-radius: 22px;
+    outline: var(--outline-btn);
+    background-color: var(--rojo);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    
+    z-index: 1000;
+}
+
+.titulo-ins {
+    font-size: var(--fs-titulo-ins);
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+
+    color: var(--blanco);
+}
+
+.texto-ins {
+    font-size: var(--fs-text-ins);
+    margin: 0.5rem 0;
+    color: var(--blanco);
+}
+
+/* BOTÓN VOLVER */
+#volver {
+    position: fixed;
+    left: 1rem;
+    top: 2rem;
+
+    background-color: transparent;
+    border: none;
+    appearance: none;
+   
+    cursor: pointer;
+    
+    transition: 0.08s;
+}
+
+#volver svg {
+    width: 4rem;
+}
+
+#volver:hover {
+    transform: scale(1.1);
+
+    transition: 0.08s;
+}
+
+/* FOOTER */
+footer img {
+    width: 200px;
+    margin:1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+
+/* MENÚ NIVELES */
+/* contenedor que abarca todo el menu */
+#contenedor-externo {
+    position: fixed;
+    top:-3px;
+    right: 100px;
+    
+    height: 76px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--rojo);
+    border: 3px solid var(--negro);
+    border-radius: 0 0 22px 22px;
+}
+
+/* contenedor que abarca todos los niveles */
+#contenedor-niveles {
+    display: flex;
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+/* cada boton individual de los niveles */
+.boton-niveles {
+    width: 102px;
+    min-width: 102px;
+    height: 40px;
+    margin-right: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    border: 3px solid var(--negro);
+    border-radius: 7px;
+    background-color: var(--fondo);
+    color: var(--negro);
+    
+    cursor: pointer;
+}
+
+.boton-niveles:first-of-type {
+    margin-left: 20px;
+}
+
+/* quitar el estilo del "a" */
+#contenedor-niveles a {
+    text-decoration: none;
+}
+
+/* Hover de los botones */
+.boton-niveles:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* El boton que pulsamos para que aparzca o desaparezca el menu */
+#boton-desplegable-niveles {
+    height: 40px;
+    padding: 20px 40px;
+    
+    display: flex;
+    align-items: center;
+    
+    color: var(--blanco);
+    font-size: 32px;
+    
+    cursor: pointer;
+}
+
+/* te selecciona el nivel en el que te encuentras */
+#aSeleccionado, #contenedor-niveles input:checked + .boton-niveles {
+    color: var(--fondo);
+    background-color: var(--negro);
+}
+
+
+
+/* CONFETTI */ 
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border: 0px solid var(--negro);
+}
+  

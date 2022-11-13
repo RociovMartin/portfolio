@@ -1,0 +1,121 @@
+.container-relative {
+  position: relative;
+  height: 600px;
+  width: 600px;
+  margin: auto;
+}
+
+.gameboard {
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: solid rgb(26, 24, 24) 5px;
+}
+
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+}
+
+.rojo {
+  background: var(--rojo);
+}
+
+.azul {
+  background: var(--azul);
+}
+
+
+.verde {
+  background: var(--verde);
+}
+
+
+.amarillo {
+  background: var(--amarillo);
+}
+
+.rojo.light {
+  filter: brightness(230%);
+}
+
+.azul.light {
+  filter: brightness(130%);
+}
+
+.verde.light {
+  filter: brightness(130%);
+}
+
+.amarillo.light {
+  filter: brightness(160%);
+}
+
+.btn-start {
+  position: absolute;
+  
+  top: 45%;
+  left: 30%;
+
+}
+
+.hide {
+  display: none;
+}
+
+.swal-modal {
+  background-color: var(--complementario);
+  outline: 4px solid var(--negro);
+  width: 50%;
+}
+
+.swal-button, .swal-button:not([disabled]) {
+  border-radius: var(--br-btn);
+
+  border: none;
+  
+  outline: var(--outline-btn);
+  background-color: var(--complementario);
+  color: var(--negro);
+  
+  font-size: 1.2rem;
+  text-align: center;
+
+  cursor: pointer; 
+
+  transition: 0.2s;
+}
+
+.swal-button:hover, .swal-button:not([disabled]):hover {
+  color: var(--complementario);
+  background-color: var(--negro);
+
+  transition: 0.2s;
+}
+
+.swal-icon--success::after, .swal-icon--success::before, .swal-icon--success__hide-corners {
+  display: none;
+}
+
+.swal-title, .swal-text {
+  color: var(--negro);
+}
+
+.swal-title {
+  font-size: var(--fs-titulo-ins);
+}
+
+.swal-text {
+  font-size: var(--fs-text-ins);
+}

@@ -1,0 +1,18 @@
+
+.wp
+{
+  position: absolute;
+  bottom: 6px;
+}
+.pdf
+{
+  position: absolute;
+  bottom: 6px;
+  left: 820px;
+}
+.figma
+{
+  position: absolute;
+  bottom: 6px;
+  right: 800px;
+}

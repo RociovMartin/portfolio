@@ -1,0 +1,33 @@
+.cuerpo {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 80px;
+}
+
+table {
+    width: 578px;
+    height: 578px;
+}
+
+td {
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.5);    
+}
+
+.fotito {
+    float: right;
+    width: 140px;
+}
+
+img#completa {
+    width: 350px;
+    margin-left: 4rem;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}

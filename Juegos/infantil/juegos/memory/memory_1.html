@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es-ca">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="author" description="Palma Web V">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="../comun/css/stylebackground.css">
+		<link rel="stylesheet" href="../comun/css/juegos.css">
+
+		<!-- CSS específico -->
+		<style>
+			.memory-card {
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+		
+		<title>Memory</title>
+		<link rel="shortcut icon" href="../comun/img/iconos/memory_icon.svg" type="image/x-icon">
+	</head>
+	<body>
+			<!-- Titulo -->
+			<h1 id="titulo">Memory</h1>
+			
+			<!-- Fondo -->
+			<main>
+				<div class="circle cataleg">
+				</div>
+				<div class="circle ajuda">
+				</div>
+				<div class="circle explorador">
+				</div>
+				<div class="circle tramits">
+				</div>
+			</main>	
+
+			<!-- Boton para volver -->
+			<button title="Volver" onclick="volverGaleriaJuegos() " id="volver">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+					<path d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"/>
+				</svg>
+			</button>
+
+			<!-- Instrucciones -->
+			<div id="instrucciones-absoluto">
+				<div class="contenedor-instrucciones">
+					<div class="instrucciones-btn" onclick="toggleInstrucciones()">
+						<img src="../comun/img/instrucciones.png" alt="Instrucciones">
+					</div>
+					<div class="instrucciones">
+						<h3 class="titulo-ins">Instruccions</h3>
+						<p class="texto-ins">Cerca les parelles de la mateixa fruita. Clica a les targetes per girar-les.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Juego -->
+			<div class="tablero">
+				<section class="memory-game container" >
+					<div class="memory-card" data-framework="react">
+						<img class="back-face" src="img/pattern.svg">
+						<img class="front-face" src="img/melocoton.png">
+					</div>
+	
+					<div class="memory-card" data-framework="react">
+						<img class="back-face" src="img/pattern.svg">
+						<img class="front-face" src="img/melocoton.png">
+					</div>
+	
+					<div class="memory-card" data-framework="angular"> 
+						<img class="back-face" src="img/pattern.svg">
+						<img class="front-face" src="img/pera.png">
+					</div>
+	
+					<div class="memory-card" data-framework="angular">
+						<img class="back-face" src="img/pattern.svg">
+						<img class="front-face" src="img/pera.png">
+					</div>
+	
+					<div class="memory-card" data-framework="ember">
+						<img class="back-face" src="img/pattern.svg">
+						<img class="front-face" src="img/granada.png">
+					</div>
+	
+					<div class="memory-card" data-framework="ember">
+						<img class="back-face"src="img/pattern.svg">
+						<img class="front-face" src="img/granada.png">
+					</div>
+				</section>
+				
+				<button id="volverJugar" value="Recargar" onclick="location.reload()" class="btn">Tornar a Jugar</button>
+			</div>
+
+
+			<!-- Confeti -->
+			<canvas id="canvas"></canvas>
+
+			
+			<!-- Menu Niveles -->
+			<div id="contenedor-externo">
+				<div id="contenedor-niveles">
+					<!-- Introducir el id="aSeleccionado" para que aparezca por defecto seleccionada el primer nivel -->
+					<a id="aSeleccionado" href="#" class="boton-niveles">Nivel 1</a>
+					<a href="memory_2.html" class="boton-niveles">Nivel 2</a>
+					<a href="memory_3.html" class="boton-niveles">Nivel 3</a>
+				</div>
+				<div onclick="desplegarNiveles()" id="boton-desplegable-niveles">Nivells</div>
+			</div>
+			
+			<!-- JavaScript -->
+			<script type=text/javascript src="js/scripts.js"></script>
+			
+			<!-- JavaScript Comun -->
+			<script src="../comun/js/confeti.js"></script>
+			<script src="../comun/js/instrucciones.js"></script>
+			<script src="../comun/js/javascript_volver.js"></script>
+			<script src="../comun/js/seleccion_nivel.js"></script>
+			
+
+		</body>
+</html>

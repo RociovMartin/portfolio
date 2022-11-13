@@ -1,0 +1,41 @@
+#titulo {
+  margin-bottom: 2rem;
+}
+
+#board {
+  background-color: var(--fondo);
+  margin: auto;
+}
+
+#board td {
+  width: 30pt;
+  height: 30pt;
+  color:  var(--negro);
+  text-align: center;
+}
+
+#board td.start {
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-left: 4px var(--negro) solid;
+  border-top: 4px var(--negro) solid;
+  text-align: center;
+}
+
+#board td.end {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#message {
+  margin: 0;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+#volver-jugar {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}

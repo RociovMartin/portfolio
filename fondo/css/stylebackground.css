@@ -1,0 +1,233 @@
+
+:root {
+	--background-color: #c7bfbf;
+
+	--blue-color: #84a7d4;
+	--blue-light-color: rgba(149, 174, 255, 0.54);
+	--blue-shadow-color: rgba(0, 0, 0, 0.14);
+
+	--lila-color: #a849d4;
+	--lila-light-color: #b078f0;
+	--lila-shadow-color: rgba(0, 0, 0, 0.14);
+
+	--yellow-color: #ecac77;
+	--yellow-light-color: #fdcfa9;
+	--yellow-shadow-color: rgba(0, 0, 0, 0.14);
+
+	--rosado-color: #d8838a;
+	--rosado-light-color: #f4bbde;
+	--rosado-shadow-color: rgba(0, 0, 0, 0.14);
+}
+
+body {
+	background-color: var(--background-color);
+	overflow-x: hidden;
+}	
+
+main {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: -1000;
+}
+
+div.circle {
+	border-radius: 50%;
+	background-color: var(--main-color);
+	z-index: -999;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+}
+
+
+/*ROJO*/
+.circle.cataleg {
+	position: absolute;
+	bottom: -80px;
+	right: -80px;
+
+	width: 500px;
+	height: 500px;
+
+	background-color: var(--lila-color);
+
+	-webkit-box-shadow: 9px 9px 15px 5px var(--lila-shadow-color), -9px -9px 15px 5px var(--lila-light-color), 0 0 30px 30px var(--lila-color); 
+	box-shadow: 9px 9px 15px 5px var(--lila-shadow-color), -9px -9px 15px 5px var(--lila-light-color), 0 0 30px 30px var(--lila-color);
+	
+	animation-name: movimiento1;
+}
+
+
+/*AMARILLO*/
+.circle.ajuda {
+	position: absolute;
+	top: -250px;
+	left: 60px;
+
+	width: 400px;
+	height: 400px;
+
+	background-color: var(--yellow-color);
+
+	-webkit-box-shadow: 9px 9px 15px 5px var(--yellow-shadow-color), -9px -9px 15px 5px var(--yellow-light-color), 0 0 30px 30px var(--yellow-color); 
+	box-shadow: 9px 9px 15px 5px var(--yellow-shadow-color), -9px -9px 15px 5px var(--yellow-light-color), 0 0 30px 30px var(--yellow-color);
+
+	animation-name: movimiento2;
+}
+
+
+/*AZUL*/
+.circle.explorador {
+	position: absolute;
+	top: 100px;
+	left: -40px;
+
+	width: 250px;
+	height: 250px;
+
+	background-color: var(--blue-color);
+
+	-webkit-box-shadow: 9px 9px 15px 5px var(--blue-shadow-color), -9px -9px 15px 5px var(--blue-light-color), 0 0 30px 30px var(--blue-color); 
+	box-shadow: 9px 9px 15px 5px var(--blue-shadow-color), -9px -9px 15px 5px var(--blue-light-color), 0 0 30px 30px var(--blue-color);
+
+	animation-name: movimiento4;
+	/*animation-direction: reverse;*/
+}
+
+
+/*VERDE*/
+.circle.tramits {
+	position: absolute;
+	top: 250px;
+	right: 300px;
+
+	width: 270px;
+	height: 270px;
+
+	background-color: var(--rosado-color);
+
+	-webkit-box-shadow: 9px 9px 15px 5px var(--rosado-shadow-color), -9px -9px 15px 5px var(--rosado-light-color), 0 0 30px 30px var(--rosado-color); 
+	box-shadow: 9px 9px 15px 5px var(--rosado-shadow-color), -9px -9px 15px 5px var(--rosado-light-color), 0 0 30px 30px var(--rosado-color);
+
+	animation-name: movimiento3;
+}
+
+.circle .imgtext {
+	width: 100%;
+	animation-name: giro;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.circle .imgicon {
+	width: 35%;
+	position: absolute;
+	top: 33%;
+	left: 33%;
+}
+
+@keyframes giro {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes movimiento1 {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateX(-30px);
+	}
+
+	40% {
+		transform: translateY(-40px);
+	}
+
+	60% {
+		transform: translateX(50px);
+	}
+
+	80% {
+		transform: translateY(-50px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes movimiento2 {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateX(50px);
+	}
+	40% {
+		transform: translateY(-25px);
+	}
+
+	60% {
+		transform: translateX(-50px);
+	}
+
+	80% {
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes movimiento3 {
+	0% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(70px);
+	}
+	40% {
+		transform: translateY(-40px);
+	}
+
+	60% {
+		transform: translateX(40px);
+	}
+
+	80% {
+		transform: translateY(-80px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes movimiento4 {
+	0% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateX(-30px);
+	}
+	40% {
+		transform: translateY(50px);
+	}
+
+	60% {
+		transform: translateX(-30px);
+	}
+
+	80% {
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+

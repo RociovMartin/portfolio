@@ -1,0 +1,58 @@
+﻿/* Input correspondiente al desplegable de niveles */
+input {
+    display: none;
+}
+
+/* Div que contiene los botones de tornar y seguent */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+/* Imagen actual  */
+#newPhoto {
+    margin-left: 30px;  
+}
+
+/* Div que contiene las frases de Partida acabada */
+#gameOver {
+    display: none;
+}
+
+/* Div que contiene los paneles */
+.juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cuerpo del trencaclosques */
+#collage img#actualImage {
+    border: 3px solid var(--negro);
+    height: 280px;
+    width: 280px;
+    margin-left: 1.5rem;
+}
+
+#collage #sortable {
+    border: 3px solid var(--negro);
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    width: 400px;
+}
+
+#collage #sortable li {
+    background-size: 400% 400%;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100px;
+    height: 100px;
+}

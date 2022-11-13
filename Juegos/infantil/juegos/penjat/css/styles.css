@@ -1,0 +1,63 @@
+.hidden {
+    color: transparent;
+}
+
+.hidden::selection {
+    background-color: transparent;
+}
+
+#juego {
+    margin-top: 5rem;
+}
+
+#penjat {
+	display: block;
+    margin-left: 25%;
+}
+
+#usedLetters ~ div {
+    display: flex;
+    align-items: center;
+}
+
+#wordContainer {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 16%;
+}
+
+.letter {
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.letter::after {
+    content: ' ';
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--azul);
+}
+
+#usedLetters {
+    margin-top: -30px;
+    color: var(--negro);
+}
+
+div #usedLetters {
+    margin-top: 40px;
+    margin-left: 50%;
+    font-size: 1.5rem;
+    position: fixed;
+}
+
+#startButton {
+  display: block;
+  margin: auto;
+}
+
+#resultado {
+    margin-top: 0;
+    margin-bottom: 0;
+}
